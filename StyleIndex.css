@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #d0d0d4;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  background-color: #8f90af;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav a {
+  margin-right: 1.3em;
+  font-size: 1.2em;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header h1 {
+  font-size: 1.8em;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+header h1,
+a {
+  color: #ffffff;
+  transition: 0.2s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #8f90af;
+  color: #000000;
+}
+
+main {
+  padding: 20px;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content h2 {
+  font-size: 2.2em;
+  margin-bottom: 2%;
+}
+
+.text p {
+  width: 75%;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.text {
+  margin-bottom: 10%;
+}
+
+.projetos {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card {
+  width: 130px;
+  height: 130px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  margin-right: 1.8em;
+  margin-left: 1.8em;
+  cursor: pointer;
+  text-align: center;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.card img {
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 8px #000;
+}
+
+main figure img {
+  width: 400px;
+  height: 400px;
+  border-radius: 200px;
+}
+
+main figure figcaption {
+  text-align: center;
+}
+
+article h2 {
+  margin-left: 20px;
+}
+
+/* =========================
+   RESPONSIVIDADE APRIMORADA
+   ========================= */
+
+/* Telas até 1200px */
+@media (max-width: 1200px) {
+  /* Responsividade para telas médias */
+  header h1 {
+    font-size: 1em;
+  }
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    padding: 10px;
+  }
+  .main-content {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+  .main-content .text,
+  .projetos {
+    text-align: center;
+  }
+  .main-content .text p {
+    width: 100%;
+    font-size: 1em;
+  }
+  .main-content .projetos .card {
+    margin-top: 25px;
+  }
+}
+
+/* Telas até 900px */
+@media (max-width: 900px) {
+  /* Projetos em grid 2 colunas */
+  .projetos {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: stretch;
+    width: 100%;
+  }
+  .card {
+    margin: 0;
+    width: 60%;
+    height: auto;
+  }
+}
+
+/* Telas até 700px */
+@media (max-width: 700px) {
+  /* Projetos em grid 2 colunas e cards maiores */
+  .projetos {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    justify-items: center;
+    width: 100%;
+  }
+  .card {
+    width: 70%;
+    height: auto;
+    aspect-ratio: 1/1;
+    margin: 0;
+    font-size: 1.1em;
+  }
+}
+
+/* Telas até 480px */
+@media (max-width: 480px) {
+  /* Ajustes para mobile */
+  header {
+    padding: 10px 2px;
+  }
+  header h1 {
+    font-size: 1em;
+  }
+  .main-content h2,
+  .titulo {
+    font-size: 1em;
+  }
+  .card {
+    width: 75%;
+    height: auto;
+    aspect-ratio: 1/1;
+    margin: 0;
+    font-size: 1em;
+  }
+  main figure img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+  }
+  .text p {
+    font-size: 0.9em;
+    padding: 0 2px;
+  }
+  .main-content {
+    margin-bottom: 5%;
+  }
+  .projetos {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
